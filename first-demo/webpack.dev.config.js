@@ -14,20 +14,28 @@ module.exports = {
 					name: '[name].[ext]',
 					outputPath: 'images/',
 					limit: 2048000,
-					publicPath: 'assets',
+					// publicPath: 'assets',
 					emitFile: true
 				}
 			}
 		},
 		{
-			test: /\.vue$/,
-			use: {
-				loader: 'file-loader'
-			}
+			test: /\.scss$/,
+			// loader的执行顺序是从上到下，从右到左。
+			use: [ 'style-loader', 
+				{
+					loader: 'css-loader',
+					options: {
+						importLoaders: 2
+					}
+				}, 
+				'sass-loader', 
+				'postcss-loader'
+			]
 		}]
 	},
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname + '/dist')
-	},
+	}
 }
