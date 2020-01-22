@@ -29,8 +29,8 @@ module.exports = {
 						importLoaders: 2
 					}
 				}, 
-				'sass-loader', 
-				'postcss-loader'
+				'sass-loader',
+				'postcss-loader',
 			]
 		}]
 	},
