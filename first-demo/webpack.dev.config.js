@@ -20,20 +20,27 @@ module.exports = {
 			}
 		},
 		{
+			test: /\.(eot|ttf|svg|woff|woff2)$/,
+			use: {
+				loader: 'file-loader'
+			}
+		},
+		{
 			test: /\.scss$/,
 			// loader的执行顺序是从上到下，从右到左。
-			use: [ 'style-loader', 
+			use: [
+				'style-loader', 
 				{
 					loader: 'css-loader',
 					options: {
-						importLoaders: 2,
-						modules: true
+						importLoaders: 2
 					}
 				}, 
 				'sass-loader',
 				'postcss-loader',
 			]
-		}]
+		}
+		]
 	},
 	output: {
 		filename: 'bundle.js',
