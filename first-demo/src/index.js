@@ -1,5 +1,8 @@
-import './index.scss';
+// import './index.scss';
 
-let root = document.getElementById('root');
+// let root = document.getElementById('root');
 
-root.innerHTML = '<div class="iconfont iconplant-1"></div>';
+// root.innerHTML = '<div class="iconfont iconplant-1"></div>';
+
+
+consol.log(1111111)

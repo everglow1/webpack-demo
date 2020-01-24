@@ -3,13 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	mode: 'production',
+	mode: 'development',
+	devtool: 'cheap-module-eval-source-map', // 打包出错，映射源代码错误位置 cheap业务代码。 module其它模块错误也映射
+	// devtool: 'cheap-module-source-map', // source-map原理
 	entry: {
 		main: './src/index.js',
-		sub: './src/index.js'
+		// sub: './src/index.js'
 	},
 	output: {
-		publicPath: 'https://www.cdn.com',
+		// 可方dnd地址
+		// publicPath: 'https://www.cdn.com',  
 		filename: '[name].js',
 		path: path.resolve(__dirname + '/dist')
 	},
