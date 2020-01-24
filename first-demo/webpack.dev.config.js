@@ -10,9 +10,18 @@ module.exports = {
 		main: './src/index.js',
 		// sub: './src/index.js'
 	},
+	devServer: {
+		contentBase: './dist',
+		open: true,  // 自动打开浏览器
+		port: 8080,
+		// 跨域代理, 请求api 会请求 http://localhost:3000
+		proxy: {
+			"/api": "http://localhost:3000"
+		}
+	},
 	output: {
-		// 可方dnd地址
-		// publicPath: 'https://www.cdn.com',  
+		// 可方放dnd地址
+		publicPath: '/',
 		filename: '[name].js',
 		path: path.resolve(__dirname + '/dist')
 	},
@@ -46,7 +55,7 @@ module.exports = {
 					options: {
 						importLoaders: 2
 					}
-				}, 
+				},
 				'sass-loader',
 				'postcss-loader',
 			]

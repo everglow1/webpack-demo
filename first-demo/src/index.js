@@ -5,4 +5,8 @@
 // root.innerHTML = '<div class="iconfont iconplant-1"></div>';
 
 
-consol.log(1111111)
+console.log('22222')
+
+
+
+console.log('11111')
