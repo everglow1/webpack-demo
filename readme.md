@@ -11,3 +11,7 @@
 1. 命令行：webpack --watch
 2. webpack 配置文件 devserver选项。
 3. node脚本写监听文件
+
+#### presets
+
+- babel 顺序从下至上。

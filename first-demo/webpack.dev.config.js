@@ -5,13 +5,14 @@ const webpack = require('webpack');
 
 module.exports = {
 	mode: 'development',
+	// cheap只带列信息，
 	devtool: 'cheap-module-eval-source-map', // 打包出错，映射源代码错误位置 cheap业务代码。 module其它模块错误也映射
 	// devtool: 'cheap-module-source-map', // source-map原理
 	entry: {
 		main: './src/index.js',
 		// sub: './src/index.js'
 	},
-	// devserver打包的代码不会在目录下， 在电脑内存中。增加打包速度。
+	// devserver打包的代码不会在目录下， 在电脑内存中。增加打包速度。 方便在开发环境调试代码
 	devServer: {
 		contentBase: './dist',
 		open: true,  // 自动打开浏览器
