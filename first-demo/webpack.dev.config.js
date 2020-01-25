@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	mode: 'development',
@@ -10,10 +11,13 @@ module.exports = {
 		main: './src/index.js',
 		// sub: './src/index.js'
 	},
+	// devserver打包的代码不会在目录下， 在电脑内存中。增加打包速度。
 	devServer: {
 		contentBase: './dist',
 		open: true,  // 自动打开浏览器
 		port: 8080,
+		hot: true,  // 开启热更新， css改变就不刷新页面,只变化对应css
+		// hotonly: true,
 		// 跨域代理, 请求api 会请求 http://localhost:3000
 		proxy: {
 			"/api": "http://localhost:3000"
@@ -59,14 +63,29 @@ module.exports = {
 				'sass-loader',
 				'postcss-loader',
 			]
+		},
+		{
+			test: /\.css$/,
+			// loader的执行顺序是从上到下，从右到左。
+			use: [
+				'style-loader', 
+				{
+					loader: 'css-loader',
+					options: {
+						importLoaders: 2
+					}
+				},
+				'postcss-loader',
+			]
 		}
-		]
+	]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new webpack.HotModuleReplacementPlugin()
 	],
 	
 }
