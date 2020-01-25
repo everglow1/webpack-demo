@@ -29,3 +29,16 @@
 // 		number();
 // 	})
 // }
+// 直接引入不实用作为一个库的开发。
+// import "@babel/polyfill";
+
+const arr = [
+	new Promise(() => {}),
+	new Promise(() => {})
+]
+arr.map(item => {
+	console.log(item)
+})
+console.log(111)
+console.log(3333)
+console.log(444)

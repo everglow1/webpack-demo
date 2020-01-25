@@ -30,7 +30,30 @@ module.exports = {
 		path: path.resolve(__dirname + '/dist')
 	},
 	module: {
-		rules: [{
+		rules: [
+			{ 
+				test: /\.js$/, 
+				exclude: /node_modules/, 
+				loader: 'babel-loader',
+				// options: {
+				// 	// @babel/preset-env 语法的转化
+				// 	// presets: [['@babel/preset-env', {
+				// 	// 	targets: {
+				// 	// 		chrome: '67'
+				// 	// 	},
+ 				// 	// 	useBuiltIns: 'usage'
+				// 	// }]]
+				// 	// "plugins": [["@babel/plugin-transform-runtime", {
+				// 	// 	"absoluteRuntime": false,
+				// 	// 	"corejs": 2,
+				// 	// 	"helpers": true,
+				// 	// 	"regenerator": true,
+				// 	// 	"useESModules": false,
+				// 	// 	"version": "7.0.0-beta.0"
+				// 	// }]]
+				// }
+			},
+			{
 			test: /\.(jpg|png|gif)$/,
 			use: {
 				loader: 'file-loader',
