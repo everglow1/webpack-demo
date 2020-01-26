@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
 	entry: {
+		// loadsh: './src/loadsh.js',
 		main: './src/index.js',
 		// sub: './src/index.js'
 	},
@@ -11,7 +12,7 @@ module.exports = {
 		// 可方放dnd地址
 		// publicPath: '/',
 		filename: '[name].js',
-		path: path.resolve(__dirname + '/dist')
+		path: path.resolve(__dirname, '../dist')
 	},
 	module: {
 		rules: [
@@ -93,4 +94,10 @@ module.exports = {
 		}),
 		new CleanWebpackPlugin()
 	],
+	// optimization: {
+	// 	// 同步代码分割
+	// 	splitChunks: {
+	// 		chunks: 'all'
+	// 	}
+	// }
 }

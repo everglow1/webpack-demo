@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-build": "webpack --config ./build/webpack.dev.config.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js",
     "build": "webpack --config ./build/webpack.prod.config.js",
     "start": "webpack-dev-server --config ./build/webpack.dev.config.js",
@@ -44,6 +45,7 @@
     "@babel/runtime-corejs2": "^7.8.3",
     "core-js": "^2.6.11",
     "express": "^4.17.1",
+    "lodash": "^4.17.15",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "webpack-dev-middleware": "^3.7.2"

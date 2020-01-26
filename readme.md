@@ -23,3 +23,11 @@
 - development模式不支持
 - 自带 （production 模式下）
 - sideEffects： 去除不需要tree shaking的模块
+
+
+#### 代码分割: 和webpack无关
+
+- 业务逻辑做一个文件，类库之类的做一个文件
+- 合理的代码分割可以使代码运行效率更高
+- 同步代码分割：webpack配置optimization.splitChunks
+- 异步（import）代码分割：自动
