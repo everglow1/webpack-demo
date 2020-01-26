@@ -98,8 +98,8 @@ module.exports = {
 		// 同步代码分割
 		splitChunks: {
 			chunks: "all",
-			minSize: 0,
-			minChunks: 1,  // 只使用了1次就分割
+			minSize: 30000,
+			minChunks: 1,  // 模块只使用了1次就分割
 			maxAsyncRequests: 5,
 			maxInitialRequests: 3,
 			automaticNameDelimiter: '~',
@@ -109,10 +109,11 @@ module.exports = {
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
 					priority: -10,  // 优先级越大，越高。
-					filename: 'vendors.js'  // 打包的文件名字
+					// filename: 'vendors.js'  // 打包的文件名字
+					name: 'vendors.js'  // 打包的文件名字
 				},
 				default: {
-					// minChunks: 2,
+					minChunks: 2,
 					priority: -20,
 					reuseExistingChunk: true,  // 如果一个模块已经被打包，就使用原先被打包的
 					filename: 'common.js'

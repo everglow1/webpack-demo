@@ -32,3 +32,8 @@
 - 同步代码分割：webpack配置optimization.splitChunks
 - 异步（import）代码分割：自动
 - 底层使用了splitChunksPlugin插件
+
+#### 懒加载 lazy load  chunk
+
+- 可在首页做一个单独的分割， 在详情页什么的做一个代码分割，再在路由切换时，把对应代码加载
+- 每一个文件都是一个chunk

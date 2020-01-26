@@ -62,12 +62,12 @@
 // 第一种方式
 // 当页面业务逻辑发生变化时，加载2mb的内容
 
-import _ from 'lodash';  // 1mb
-import {add} from './math'
-import counter from "./counter";
+// import _ from 'lodash';  // 1mb
+// import {add} from './math'
+// import counter from "./counter";
 
-add(1,2)
-counter()
+// add(1,2)
+// counter()
 
 // // 业务代码 2mb
 // console.log(_.join(['a', 'b', 'c'], '===='))
@@ -90,6 +90,18 @@ counter()
 // 	})
 // }
 
+async function getComponent() {
+	const { default: _ } = await import(/* webpackChunkName: "loadsh" */'lodash');
+	const element = document.createElement('div');
+	element.innerHTML = _.join(['Dell', 'Lee'], '-');
+	return element;
+}
+
+document.addEventListener('click',  () => {
+	getComponent().then(ele => {
+		document.body.appendChild(ele);
+	})
+})
 // getComponent().then(ele => {
 // 	document.body.appendChild(ele);
 // })
