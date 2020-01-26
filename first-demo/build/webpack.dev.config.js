@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.config');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 const devConfig = {
 	// mode: 'production',
@@ -21,7 +23,8 @@ const devConfig = {
 		}
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		// new BundleAnalyzerPlugin()
 	],
 	optimization: {
 		usedExports: true

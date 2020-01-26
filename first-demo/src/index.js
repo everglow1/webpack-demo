@@ -90,18 +90,24 @@
 // 	})
 // }
 
-async function getComponent() {
-	const { default: _ } = await import(/* webpackChunkName: "loadsh" */'lodash');
-	const element = document.createElement('div');
-	element.innerHTML = _.join(['Dell', 'Lee'], '-');
-	return element;
-}
+// async function getComponent() {
+// 	const { default: _ } = await import(/* webpackChunkName: "loadsh" */'lodash');
+// 	const element = document.createElement('div');
+// 	element.innerHTML = _.join(['Dell', 'Lee'], '-');
+// 	return element;
+// }
 
-document.addEventListener('click',  () => {
-	getComponent().then(ele => {
-		document.body.appendChild(ele);
-	})
-})
+// document.addEventListener('click',  () => {
+// 	getComponent().then(ele => {
+// 		document.body.appendChild(ele);
+// 	})
+// })
 // getComponent().then(ele => {
 // 	document.body.appendChild(ele);
 // })
+
+document.addEventListener('click',  () => {
+	import(/* webpackPrefetch: true */ './click').then(({default: _}) => {
+		_()
+	})
+})
