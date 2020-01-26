@@ -94,10 +94,30 @@ module.exports = {
 		}),
 		new CleanWebpackPlugin()
 	],
-	// optimization: {
-	// 	// 同步代码分割
-	// 	splitChunks: {
-	// 		chunks: 'all'
-	// 	}
-	// }
+	optimization: {
+		// 同步代码分割
+		splitChunks: {
+			chunks: "all",
+			minSize: 0,
+			minChunks: 1,  // 只使用了1次就分割
+			maxAsyncRequests: 5,
+			maxInitialRequests: 3,
+			automaticNameDelimiter: '~',
+			name: true,
+			// 缓存组，比如引入了jquery和loadsh, 配置之后会生成一个文件.
+			cacheGroups: {
+				vendors: {
+					test: /[\\/]node_modules[\\/]/,
+					priority: -10,  // 优先级越大，越高。
+					filename: 'vendors.js'  // 打包的文件名字
+				},
+				default: {
+					// minChunks: 2,
+					priority: -20,
+					reuseExistingChunk: true,  // 如果一个模块已经被打包，就使用原先被打包的
+					filename: 'common.js'
+				},
+			}
+		}
+	}
 }

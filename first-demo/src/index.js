@@ -63,10 +63,15 @@
 // 当页面业务逻辑发生变化时，加载2mb的内容
 
 import _ from 'lodash';  // 1mb
+import {add} from './math'
+import counter from "./counter";
+
+add(1,2)
+counter()
 
 // // 业务代码 2mb
-console.log(_.join(['a', 'b', 'c'], '===='))
-console.log(_.join(['a', 'b', 'c']))
+// console.log(_.join(['a', 'b', 'c'], '===='))
+// console.log(_.join(['a', 'b', 'c']))
 // 打包文件很大，加载时间很长。
 
 // 第二种方式
@@ -78,7 +83,7 @@ console.log(_.join(['a', 'b', 'c']))
 
 
 // function getComponent() {
-// 	return import('lodash').then(({ default: _ }) => {
+// 	return import(/* webpackChunkName: "loadsh" */'lodash').then(({ default: _ }) => {
 // 		let element = document.createElement('div');
 // 		element.innerHTML = _.join(['Dell', 'Lee'], '-');
 // 		return element;

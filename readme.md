@@ -31,3 +31,4 @@
 - 合理的代码分割可以使代码运行效率更高
 - 同步代码分割：webpack配置optimization.splitChunks
 - 异步（import）代码分割：自动
+- 底层使用了splitChunksPlugin插件
