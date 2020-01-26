@@ -15,3 +15,11 @@
 #### presets
 
 - babel 顺序从下至上。
+
+
+#### tree shaking
+
+- 去除无用的内容。（只支持es模块的引入, 因为它的底层是一个静态引入的方式）
+- development模式不支持
+- 自带 （production 模式下）
+- sideEffects： 去除不需要tree shaking的模块

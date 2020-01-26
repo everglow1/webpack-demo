@@ -43,13 +43,18 @@
 // console.log(111)
 // console.log(3333)
 // console.log(444)
-import "@babel/polyfill";
-import  React, { Component } from 'react';
-import  ReactDom from 'react-dom';
 
-class App extends Component {
-	render() {
-		return <div>Hello World</div>
-	}
-}
-ReactDom.render(<App/>, document.getElementById('root'));
+// import "@babel/polyfill";
+// import  React, { Component } from 'react';
+// import  ReactDom from 'react-dom';
+
+// class App extends Component {
+// 	render() {
+// 		return <div>Hello World</div>
+// 	}
+// }
+// ReactDom.render(<App/>, document.getElementById('root'));
+
+import { add } from './math'
+
+add(1,10)
