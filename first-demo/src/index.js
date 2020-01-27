@@ -118,10 +118,15 @@
 
 // console.log('hello world')
 
-import _ from 'lodash';
-import $ from 'jquery';
+// import _ from 'lodash';
+// import $ from 'jquery';
+// import { ui } from './jquery.ui';
 
-const dom = $('div');
-dom.html(_.join(['dell', 'lee'], '-'));
-$('body').append(dom);
-console.log(1111)
+// ui();
+// const dom = $('div');
+// dom.html(_.join(['dell', 'lee'], '-'));
+// $('body').append(dom);
+// console.log(1111)
+
+
+console.log(this)

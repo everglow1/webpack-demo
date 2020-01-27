@@ -52,3 +52,6 @@
 #### webpack与浏览器缓存
 
 - 利用contenthash。 线上环境有效。
+
+#### shimming(垫片/实现原本实现不了的行为)
+
