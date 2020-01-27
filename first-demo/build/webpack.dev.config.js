@@ -22,6 +22,39 @@ const devConfig = {
 			"/api": "http://localhost:3000"
 		}
 	},
+	module: {
+		rules: [
+			{
+				test: /\.scss$/,
+				// loader的执行顺序是从上到下，从右到左。
+				use: [
+					'style-loader', 
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 2
+						}
+					},
+					'sass-loader',
+					'postcss-loader',
+				]
+			},
+			{
+				test: /\.css$/,
+				// loader的执行顺序是从上到下，从右到左。
+				use: [
+					'style-loader', 
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 2
+						}
+					},
+					'postcss-loader',
+				]
+			}
+		]
+	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		// new BundleAnalyzerPlugin()

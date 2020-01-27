@@ -44,3 +44,7 @@
 - 一般只有异步的代码才能提高打包的性能，同步的代码只能提高一个缓存，实际上对性能影响不大。
 - 懒加载
 - 魔法注释 webpackPrefetch: true | webpackPreload: true， 
+
+#### css代码分割
+
+- mini-css-extract-plugin插件，与style-loader不能共用 ，该插件只能线上使用。

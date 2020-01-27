@@ -106,8 +106,14 @@
 // 	document.body.appendChild(ele);
 // })
 
-document.addEventListener('click',  () => {
-	import(/* webpackPrefetch: true */ './click').then(({default: _}) => {
-		_()
-	})
-})
+// document.addEventListener('click',  () => {
+// 	import(/* webpackPrefetch: true */ './click').then(({default: _}) => {
+// 		_()
+// 	})
+// })
+
+
+import './style.css'
+import './style1.css'
+
+console.log('hello world')

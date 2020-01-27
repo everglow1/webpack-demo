@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.41.5",
   "hash": "d3e846d46ef4ae647b37",
-  "time": 1480,
-  "builtAt": 1580051525548,
+  "time": 1185,
+  "builtAt": 1580094840740,
   "publicPath": "",
   "outputPath": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/dist",
   "assetsByChunkName": {
@@ -141,14 +141,14 @@
               "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/babel-loader/lib/index.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 140,
-                "building": 849
+                "factory": 71,
+                "building": 662
               }
             }
           ],
           "profile": {
             "factory": 2,
-            "building": 13
+            "building": 12
           },
           "failed": false,
           "errors": 0,
@@ -230,8 +230,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 140,
-            "building": 849
+            "factory": 71,
+            "building": 662
           },
           "failed": false,
           "errors": 0,
@@ -292,14 +292,14 @@
           "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/babel-loader/lib/index.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 140,
-            "building": 849
+            "factory": 71,
+            "building": 662
           }
         }
       ],
       "profile": {
         "factory": 2,
-        "building": 13
+        "building": 12
       },
       "failed": false,
       "errors": 0,
@@ -343,8 +343,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 140,
-        "building": 849
+        "factory": 71,
+        "building": 662
       },
       "failed": false,
       "errors": 0,
@@ -456,8 +456,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 95,
-                "building": 50
+                "factory": 50,
+                "building": 25
               },
               "failed": false,
               "errors": 0,
@@ -502,14 +502,14 @@
                   "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 95,
-                    "building": 50
+                    "factory": 50,
+                    "building": 25
                   }
                 }
               ],
               "profile": {
-                "factory": 127,
-                "building": 980
+                "factory": 4,
+                "building": 892
               },
               "failed": false,
               "errors": 0,
@@ -555,8 +555,8 @@
                   "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 95,
-                    "building": 50
+                    "factory": 50,
+                    "building": 25
                   }
                 },
                 {
@@ -564,14 +564,14 @@
                   "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/lodash/lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 127,
-                    "building": 980
+                    "factory": 4,
+                    "building": 892
                   }
                 }
               ],
               "profile": {
-                "factory": 14,
-                "building": 18
+                "factory": 16,
+                "building": 19
               },
               "failed": false,
               "errors": 0,
@@ -617,8 +617,8 @@
                   "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 95,
-                    "building": 50
+                    "factory": 50,
+                    "building": 25
                   }
                 },
                 {
@@ -626,14 +626,14 @@
                   "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/lodash/lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 127,
-                    "building": 980
+                    "factory": 4,
+                    "building": 892
                   }
                 }
               ],
               "profile": {
-                "factory": 14,
-                "building": 18
+                "factory": 16,
+                "building": 19
               },
               "failed": false,
               "errors": 0,
@@ -690,8 +690,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 95,
-            "building": 50
+            "factory": 50,
+            "building": 25
           },
           "failed": false,
           "errors": 0,
@@ -736,14 +736,14 @@
               "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 95,
-                "building": 50
+                "factory": 50,
+                "building": 25
               }
             }
           ],
           "profile": {
-            "factory": 127,
-            "building": 980
+            "factory": 4,
+            "building": 892
           },
           "failed": false,
           "errors": 0,
@@ -789,8 +789,8 @@
               "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 95,
-                "building": 50
+                "factory": 50,
+                "building": 25
               }
             },
             {
@@ -798,14 +798,14 @@
               "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 127,
-                "building": 980
+                "factory": 4,
+                "building": 892
               }
             }
           ],
           "profile": {
-            "factory": 14,
-            "building": 18
+            "factory": 16,
+            "building": 19
           },
           "failed": false,
           "errors": 0,
@@ -851,8 +851,8 @@
               "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 95,
-                "building": 50
+                "factory": 50,
+                "building": 25
               }
             },
             {
@@ -860,14 +860,14 @@
               "identifier": "/Users/weidian/Documents/workspace/webpack/webpack-demo1/first-demo/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 127,
-                "building": 980
+                "factory": 4,
+                "building": 892
               }
             }
           ],
           "profile": {
-            "factory": 14,
-            "building": 18
+            "factory": 16,
+            "building": 19
           },
           "failed": false,
           "errors": 0,
