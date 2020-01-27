@@ -1,6 +1,6 @@
 {
-  "name": "first-library",
-  "version": "1.0.0",
+  "name": "yzj-library",
+  "version": "1.0.1",
   "description": "a simple library",
   "main": "./dist/library.js",
   "scripts": {
