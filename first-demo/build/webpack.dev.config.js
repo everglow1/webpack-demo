@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.config');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require('path')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; // 可视化打包文件
 
 
 const devConfig = {
@@ -21,6 +22,11 @@ const devConfig = {
 		proxy: {
 			"/api": "http://localhost:3000"
 		}
+	},
+	output: {
+		filename: '[name].js',
+		chunkFilename: '[name].chunk.js',
+		path: path.resolve(__dirname, '../dist')
 	},
 	module: {
 		rules: [

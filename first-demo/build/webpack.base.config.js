@@ -11,9 +11,9 @@ module.exports = {
 	output: {
 		// 可方放dnd地址
 		// publicPath: '/',
-		filename: '[name].js',
-		chunkFilename: '[name].chunk.js',
-		path: path.resolve(__dirname, '../dist')
+		// filename: '[name].js',
+		// chunkFilename: '[name].chunk.js',
+		// path: path.resolve(__dirname, '../dist')
 	},
 	module: {
 		rules: [
@@ -49,6 +49,7 @@ module.exports = {
 		}),
 		new CleanWebpackPlugin()
 	],
+	performance: false,  // 不提示性能上的问题
 	optimization: {
 		usedExports: true,
 		// 同步代码分割
@@ -58,7 +59,7 @@ module.exports = {
 			minChunks: 1,  // 模块只使用了1次就分割
 			maxAsyncRequests: 5,
 			maxInitialRequests: 3,
-			automaticNameDelimiter: '~',
+			automaticNameDelimiter: '.',
 			name: true,
 			// 缓存组，比如引入了jquery和loadsh, 配置之后会生成一个文件.
 			cacheGroups: {
@@ -66,7 +67,7 @@ module.exports = {
 					test: /[\\/]node_modules[\\/]/,
 					priority: -10,  // 优先级越大，越高。
 					// filename: 'vendors.js'  // 打包的文件名字
-					name: 'vendors.js'  // 打包的文件名字
+					name: 'vendors'  // 打包的文件名字
 				},
 				default: {
 					minChunks: 2,

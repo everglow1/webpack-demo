@@ -48,3 +48,7 @@
 #### css代码分割
 
 - mini-css-extract-plugin插件，与style-loader不能共用 ，该插件只能线上使用。
+
+#### webpack与浏览器缓存
+
+- 利用contenthash。 线上环境有效。

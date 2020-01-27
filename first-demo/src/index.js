@@ -113,7 +113,15 @@
 // })
 
 
-import './style.css'
-import './style1.css'
+// import './style.css'
+// import './style1.css'
 
-console.log('hello world')
+// console.log('hello world')
+
+import _ from 'lodash';
+import $ from 'jquery';
+
+const dom = $('div');
+dom.html(_.join(['dell', 'lee'], '-'));
+$('body').append(dom);
+console.log(1111)
