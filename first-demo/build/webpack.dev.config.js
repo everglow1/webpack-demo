@@ -1,6 +1,4 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base.config');
 const path = require('path')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; // 可视化打包文件
 
@@ -70,4 +68,4 @@ const devConfig = {
 	},
 }
 
-module.exports = merge(baseConfig, devConfig);
+module.exports = devConfig;

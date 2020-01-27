@@ -9,10 +9,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-build": "webpack --profile --json > stats.json --config ./build/webpack.dev.config.js",
-    "dev": "webpack-dev-server --config ./build/webpack.dev.config.js",
-    "build": "webpack --config ./build/webpack.prod.config.js",
-    "start": "webpack --config ./build/webpack.dev.config.js",
+    "dev-build": "webpack --profile --json > stats.json --config ./build/webpack.base.config.js",
+    "dev": "webpack-dev-server --config ./build/webpack.base.config.js",
+    "build": "webpack --env.production --config ./build/webpack.base.config.js",
+    "start": "webpack --config ./build/webpack.base.config.js",
     "server": "node server.js"
   },
   "keywords": [],

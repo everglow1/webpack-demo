@@ -2,8 +2,11 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack');
+const merge = require('webpack-merge');
+const devConfig = require('./webpack.dev.config');
+const prodConfig = require('./webpack.prod.config');
 
-module.exports = {
+const baseConfig = {
 	entry: {
 		// loadsh: './src/loadsh.js',
 		main: './src/index.js',
@@ -93,3 +96,12 @@ module.exports = {
 		}
 	}
 }
+
+module.exports = (env) => {
+	if(env && env.production) {
+		return merge(baseConfig, prodConfig)
+	} else {
+		return merge(baseConfig, devConfig)
+	}
+}
+
