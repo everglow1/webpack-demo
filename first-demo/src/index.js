@@ -129,4 +129,8 @@
 // console.log(1111)
 
 
-console.log(this)
+// console.log(this)
+const library = require('yzj-library')
+// import * as library from 'yzj-library'
+// console.log('library', library)
+console.log(library)

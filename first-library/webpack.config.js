@@ -11,8 +11,8 @@ module.exports = {
 	// },
 	output: {
 		filename: 'library.js',
-		path: path.resolve(__dirname, 'dist'),
-		library: 'library',  // script标签引模块， 全局引入模块
+		path: path.resolve(__dirname, 'lib'),
+		// library: 'library',  // script标签引模块， 全局引入模块
 		libraryTarget: 'umd',  // umd通用模块引入都可 es module  commonjs  amd
 	}
 }

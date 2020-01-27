@@ -1,8 +1,8 @@
 {
   "name": "yzj-library",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "a simple library",
-  "main": "./dist/library.js",
+  "main": "./lib/library.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
