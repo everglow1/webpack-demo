@@ -27,6 +27,7 @@ const baseConfig = {
 				use: [
 					{
 						loader: 'babel-loader',
+						loader: 'eslint-loader'
 					},
 					// {
 					// 	loader: 'imports-loader?this=>window'

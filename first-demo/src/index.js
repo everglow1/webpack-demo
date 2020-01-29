@@ -143,4 +143,8 @@ axios.get('/react/api/header.json').then((res) => {
 	console.log('error', error)
 })
 
+function test(dd) {
+	console.log(dd)
+}
+test('dd')
 console.log(111111)

@@ -11,6 +11,7 @@ const devConfig = {
 	// devtool: 'cheap-module-source-map', // source-map原理
 	// devserver打包的代码不会在目录下， 在电脑内存中。增加打包速度。 方便在开发环境调试代码，只在dev-server环境下有效
 	devServer: {
+		overlay: true,  // 浏览器页面提示
 		contentBase: './dist',
 		open: true,  // 自动打开浏览器
 		port: 8080,
