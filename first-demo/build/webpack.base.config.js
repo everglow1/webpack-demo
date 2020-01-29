@@ -19,15 +19,23 @@ const baseConfig = {
 		// chunkFilename: '[name].chunk.js',
 		// path: path.resolve(__dirname, '../dist')
 	},
+	resolve: {
+		extensions: ['.js', '.jsx'], // 引入模块时，找对应结尾的文件
+		mainFiles: ['index', 'child'], // 找文件时，默认找index，再找child，找不到报错
+		// 别名
+		alias: {
+			delll: path.resolve(__dirname, '../src/child')
+		}
+	},
 	module: {
 		rules: [
 			{ 
-				test: /\.js$/, 
+				test: /\.jsx?$/, // 问号表示x可有可无
 				exclude: /node_modules/, 
 				use: [
 					{
 						loader: 'babel-loader',
-						loader: 'eslint-loader'
+						// loader: 'eslint-loader'
 					},
 					// {
 					// 	loader: 'imports-loader?this=>window'

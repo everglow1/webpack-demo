@@ -135,16 +135,33 @@
 // // console.log('library', library)
 // console.log(library)
 
-import axios from 'axios'
+// import axios from 'axios'
 
-axios.get('/react/api/header.json').then((res) => {
-	console.log('res', res)
-}).catch(error => {
-	console.log('error', error)
-})
+// axios.get('/react/api/header.json').then((res) => {
+// 	console.log('res', res)
+// }).catch(error => {
+// 	console.log('error', error)
+// })
 
-function test(dd) {
-	console.log(dd)
+// function test(dd) {
+// 	console.log(dd)
+// }
+// test('dd')
+// console.log(111111)
+
+
+import  React, { Component } from 'react';
+import  ReactDom from 'react-dom';
+import Child from 'delll';
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<div>this is app</div>
+				<Child />
+			</div>
+			)
+	}
 }
-test('dd')
-console.log(111111)
+ReactDom.render(<App/>, document.getElementById('root'));

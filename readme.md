@@ -55,3 +55,15 @@
 
 #### shimming(垫片/实现原本实现不了的行为)
 
+
+#### webpack性能提升
+
+1. 跟上技术的迭代（node，npm，yarn），升级这些工具的版本，尽可能用新的版本。
+
+2. 在尽可能少的模块上应用loader，让loader的作用范围尽可能变少。
+ - 比如：exclude: /node_modules/, 对node_modules的包不使用babel-loader
+
+3. 不需要使用插件的时候不使用。
+
+4. 合理的resolve参数的配置
+ - 比如资源类的文件引入写后缀。
