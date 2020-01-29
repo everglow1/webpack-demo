@@ -7,11 +7,83 @@ const merge = require('webpack-merge');
 const devConfig = require('./webpack.dev.config');
 const prodConfig = require('./webpack.prod.config');
 
+function makePlugins(configs) {
+	const plugins = [
+		// new HtmlWebpackPlugin({
+		// 	template: './src/index.html',
+		// 	filename: 'index.html',
+		// 	chunks: ['runtime', 'vendors', 'main']
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	template: './src/index.html',
+		// 	filename: 'list.html',
+		// 	chunks: ['runtime', 'vendors', 'list']
+		// }),
+		new CleanWebpackPlugin(),
+		// 垫片
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			_: 'lodash'
+		}),
+		// 给生成的html文件里边添加内容
+		new AddAssetHtmlWebpackPlugin({
+			filepath: path.resolve(__dirname, '../dll/vendors.dll.js')
+		}),
+		// 通过映射文件
+		new webpack.DllReferencePlugin({
+			manifest: path.resolve(__dirname, '../dll/vendors.mainfest.json')
+		})
+	]
+	Object.keys(configs.entry).forEach((item) => {
+		plugins.unshift(
+			new HtmlWebpackPlugin({
+				template: './src/index.html',
+				filename: `${item}.html`,
+				chunks: ['runtime', 'vendors', item]
+			})
+		)
+	})
+	return plugins
+}
+
+const plugins = [
+	new HtmlWebpackPlugin({
+		template: './src/index.html',
+		filename: 'index.html',
+		chunks: ['runtime', 'vendors', 'main']
+	}),
+	new HtmlWebpackPlugin({
+		template: './src/index.html',
+		filename: 'list.html',
+		chunks: ['runtime', 'vendors', 'list']
+	}),
+	new CleanWebpackPlugin(),
+	// 垫片
+	new webpack.ProvidePlugin({
+		$: 'jquery',
+		_: 'lodash'
+	}),
+	// 给生成的html文件里边添加内容
+	new AddAssetHtmlWebpackPlugin({
+		filepath: path.resolve(__dirname, '../dll/vendors.dll.js')
+	}),
+	// 通过映射文件
+	new webpack.DllReferencePlugin({
+		manifest: path.resolve(__dirname, '../dll/vendors.mainfest.json')
+	})
+]
+
 const baseConfig = {
+	// 单页打包
+	// entry: {
+	// 	// loadsh: './src/loadsh.js',
+	// 	main: './src/index.js',
+	// 	// sub: './src/index.js'
+	// },
+	// 多页打包配置
 	entry: {
-		// loadsh: './src/loadsh.js',
 		main: './src/index.js',
-		// sub: './src/index.js'
+		list: './src/list.js'
 	},
 	output: {
 		// 可方放dnd地址
@@ -64,25 +136,7 @@ const baseConfig = {
 			}
 		]
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html'
-		}),
-		new CleanWebpackPlugin(),
-		// 垫片
-		new webpack.ProvidePlugin({
-			$: 'jquery',
-			_: 'lodash'
-		}),
-		// 给生成的html文件里边添加内容
-		new AddAssetHtmlWebpackPlugin({
-			filepath: path.resolve(__dirname, '../dll/vendors.dll.js')
-		}),
-		// 通过映射文件
-		new webpack.DllReferencePlugin({
-			manifest: path.resolve(__dirname, '../dll/vendors.mainfest.json')
-		})
-	],
+	// plugins: plugins,
 	performance: false,  // 不提示性能上的问题
 	optimization: {
 		usedExports: true,
@@ -114,6 +168,9 @@ const baseConfig = {
 		}
 	}
 }
+
+baseConfig.plugins = makePlugins(baseConfig)
+// console.log('baseConfig.plugins', baseConfig.plugins)
 
 module.exports = (env) => {
 	if(env && env.production) {
