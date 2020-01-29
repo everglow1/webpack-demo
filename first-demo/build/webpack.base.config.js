@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin')
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const devConfig = require('./webpack.dev.config');
@@ -72,6 +73,14 @@ const baseConfig = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			_: 'lodash'
+		}),
+		// 给生成的html文件里边添加内容
+		new AddAssetHtmlWebpackPlugin({
+			filepath: path.resolve(__dirname, '../dll/vendors.dll.js')
+		}),
+		// 通过映射文件
+		new webpack.DllReferencePlugin({
+			manifest: path.resolve(__dirname, '../dll/vendors.mainfest.json')
 		})
 	],
 	performance: false,  // 不提示性能上的问题
