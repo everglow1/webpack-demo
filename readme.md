@@ -70,3 +70,13 @@
 
 5. 使用dllplugin提高打包速度。
  - 第三方模块只打包一次
+
+6. 打包文件尽可能小
+
+7. thread-loader, parallel-webpack, happlypack 多进程打包
+
+8. 合理的sourceMap
+
+9. 结合stats分析打包结果
+
+10. 开发环境内存编译，内存的读取比硬盘的读取快得多。
