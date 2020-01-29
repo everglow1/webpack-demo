@@ -28,9 +28,9 @@ const baseConfig = {
 					{
 						loader: 'babel-loader',
 					},
-					{
-						loader: 'imports-loader?this=>window'
-					}
+					// {
+					// 	loader: 'imports-loader?this=>window'
+					// }
 				],
 			},
 			{

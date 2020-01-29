@@ -9,7 +9,7 @@ const devConfig = {
 	// cheap只带列信息，
 	devtool: 'cheap-module-eval-source-map', // 打包出错，映射源代码错误位置 cheap业务代码。 module其它模块错误也映射
 	// devtool: 'cheap-module-source-map', // source-map原理
-	// devserver打包的代码不会在目录下， 在电脑内存中。增加打包速度。 方便在开发环境调试代码
+	// devserver打包的代码不会在目录下， 在电脑内存中。增加打包速度。 方便在开发环境调试代码，只在dev-server环境下有效
 	devServer: {
 		contentBase: './dist',
 		open: true,  // 自动打开浏览器
@@ -18,7 +18,14 @@ const devConfig = {
 		// hotonly: true,
 		// 跨域代理, 请求api 会请求 http://localhost:3000
 		proxy: {
-			"/api": "http://localhost:3000"
+			// "/api": "http://localhost:3000",
+			'/react': {
+				target: 'http://www.dell-lee.com',
+				secure: false,  // 对https接口请求
+				pathRewrite: {
+					'header.json': 'demo.json'
+				}
+			}
 		}
 	},
 	output: {

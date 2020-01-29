@@ -130,7 +130,17 @@
 
 
 // console.log(this)
-const library = require('yzj-library')
-// import * as library from 'yzj-library'
-// console.log('library', library)
-console.log(library)
+// const library = require('yzj-library')
+// // import * as library from 'yzj-library'
+// // console.log('library', library)
+// console.log(library)
+
+import axios from 'axios'
+
+axios.get('/react/api/header.json').then((res) => {
+	console.log('res', res)
+}).catch(error => {
+	console.log('error', error)
+})
+
+console.log(111111)
