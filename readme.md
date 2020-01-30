@@ -80,3 +80,9 @@
 9. 结合stats分析打包结果
 
 10. 开发环境内存编译，内存的读取比硬盘的读取快得多。
+
+#### loader和plugin
+
+- loader是处理模块。
+- plugin有点像钩子函数，在某些时刻生效，plugin是webapck的灵魂。plugin越多，webapck能做的事情越多。
+ 1. 事件驱动。
